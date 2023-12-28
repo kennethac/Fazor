@@ -1,0 +1,33 @@
+﻿@page "/counter"
+@rendermode InteractiveServer
+@inherits Fazor.FazorComponent
+
+<p>Hello</p>
+
+@code {
+
+    protected override RenderFragment GetRenderFragment()
+    {
+        return null;
+    }
+    
+    protected RenderFragment RenderMethod(string title,
+        int initialValue
+        )
+    {
+        var (counter, setCounter) = UseState(0);
+        var increment = () => setCounter(counter + 1);
+        var decrement = () => setCounter(counter - 1);
+
+        return @<text>
+                    <PageTitle>Counter</PageTitle>
+
+                    <h1>Counter</h1>
+
+                    <p role="status">Current count: @counter</p>
+
+                    <button class="btn btn-primary" @onclick="increment">Up</button>
+                    <button class="btn btn-primary" @onclick="decrement">Down</button>
+                </text>;
+    }
+}
