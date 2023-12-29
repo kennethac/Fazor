@@ -1,0 +1,11 @@
+@inherits Fazor.FazorComponent
+
+<p>This is fake.</p>
+
+@code {
+
+    private RenderFragment FazorRender(string name, int age)
+    {
+        return @<p>Hello, @name! I heard you are @age years old.</p>;
+    }
+}

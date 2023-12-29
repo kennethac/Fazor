@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <RootNamespace>FazorGenerator.Sample</RootNamespace>
+<!--        <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>-->
+<!--        <CompilerGeneratedFilesOutputPath>Generated</CompilerGeneratedFilesOutputPath>-->
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\Fazor\Fazor.csproj"/>
+        <!--        <ProjectReference Include="..\FazorGenerator\FazorGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false"/>-->
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Update="Pages\Testing\Testing.razor">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+        <AdditionalFiles Include="Components\App.razor" />
+        <AdditionalFiles Include="Components\Layout\MainLayout.razor" />
+        <AdditionalFiles Include="Components\Layout\NavMenu.razor" />
+        <AdditionalFiles Include="Components\Pages\Counter.razor" />
+        <AdditionalFiles Include="Components\Pages\Error.razor" />
+        <AdditionalFiles Include="Components\Pages\Home.razor" />
+        <AdditionalFiles Include="Components\Pages\Weather.razor" />
+        <AdditionalFiles Include="Components\Routes.razor" />
+        <AdditionalFiles Include="Components\_Imports.razor" />
+        <AdditionalFiles Include="Pages\Testing\Testing.razor"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="FazorGenerator" Version="1.0.0-rc015" OutputItemType="Analyzer" />
+    </ItemGroup>
+
+</Project>

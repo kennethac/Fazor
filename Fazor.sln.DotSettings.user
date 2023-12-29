@@ -2,9 +2,7 @@
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/SourceGeneratedFilesToSkip/=FazorDemo_005CMicrosoft_002ENET_002ESdk_002ERazor_002ESourceGenerators_002FMicrosoft_002ENET_002ESdk_002ERazor_002ESourceGenerators_002ERazorSourceGenerator_002FComponents_005FPages_005FCounter_005Frazor_002Eg_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b9b56493_002D1c78_002D41d9_002Da929_002D5dd9a439841e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="BasicString" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
-    &lt;TestId&gt;xUnit::6DEF8A96-EAAA-4122-AA19-86964CC68404::net8.0::Fazor.Tests.ParameterParser.BasicString&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::6DEF8A96-EAAA-4122-AA19-86964CC68404::net8.0::Fazor.Tests.ParameterParser.ComplexTypes&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::6DEF8A96-EAAA-4122-AA19-86964CC68404::net8.0::Fazor.Tests.ParameterParser.SingleNestedGenerics&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::6BA3F912-2014-44EA-99EA-D21610C8CEAA::net8.0::Fazor.Tests.ParameterParser&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
 	
