@@ -25,6 +25,7 @@ public abstract class FazorComponent : IComponent
 
     public Task SetParametersAsync(ParameterView parameters)
     {
+        // parameters.GetValueOrDefault()
         parameters.SetParameterProperties(this);
         TriggerRender();
         return Task.CompletedTask;

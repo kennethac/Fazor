@@ -1,7 +1,9 @@
 @inherits ComponentBase
+@rendermode InteractiveServer
 <p>Hello, @Name! I heard you are @Age years old.</p>
-
+<button @onclick="@OnClick">Click other</button>
 @code {
     [Parameter] public string Name { get; set; }
     [Parameter] public int Age { get; set; }
+    [Parameter] public EventCallback OnClick { get; set; }
 }

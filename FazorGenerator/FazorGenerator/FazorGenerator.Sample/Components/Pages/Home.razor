@@ -4,9 +4,9 @@
 
 <h1>Hello, world!</h1>
 
-<Testing Age="99" Name="Kenneth" OnClick="@IncE"></Testing>
-<Testing2 Age="99" Name="Kenneth"></Testing2>
-
+<Testing Age="@TestAge" Name="Kenneth" OnClick="@IncE"></Testing>
+<Testing2 Age="@TestAge" Name="Kenneth" OnClick="@IncE"></Testing2>
+<button @onclick="@IncE">Click me please</button>
 Welcome to your new app.
 
 @code {

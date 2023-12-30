@@ -1,4 +1,5 @@
 @inherits Fazor.FazorComponent
+@rendermode InteractiveServer
 
 <p>This is fake.</p>
 
@@ -6,6 +7,6 @@
 
     private RenderFragment FazorRender(string name, int age, EventCallback onClick)
     {
-        return @<p>Hello, @name! I heard you are @age years old.<button @onClick="@onClick">Click me</button></p>;
+        return @<p>Hello, @name! I heard you are @age years old.<button @onclick="@onClick">Click me</button></p>;
     }
 }

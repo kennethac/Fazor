@@ -7,6 +7,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FazorDemo", "FazorDemo\FazorDemo.csproj", "{6838206D-8A76-4C7E-84BA-1C63088FA0B1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FazorGenerator", "FazorGenerator", "{3F659DBD-43F4-4433-8261-DE0D9F02EC96}"
+	ProjectSection(SolutionItems) = preProject
+		FazorGenerator\notes.md = FazorGenerator\notes.md
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FazorGenerator", "FazorGenerator\FazorGenerator\FazorGenerator\FazorGenerator.csproj", "{B6378F97-140F-4119-B50E-6B829462675F}"
 EndProject
