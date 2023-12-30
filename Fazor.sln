@@ -17,8 +17,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FazorGenerator.Sample", "Fa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FazorGenerator.Tests", "FazorGenerator\FazorGenerator\FazorGenerator.Tests\FazorGenerator.Tests.csproj", "{6BA3F912-2014-44EA-99EA-D21610C8CEAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BogusApp", "BogusApp\BogusApp.csproj", "{2FA9D4F1-B702-4F26-80BA-A9E6B487E0F0}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,10 +47,6 @@ Global
 		{6BA3F912-2014-44EA-99EA-D21610C8CEAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BA3F912-2014-44EA-99EA-D21610C8CEAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BA3F912-2014-44EA-99EA-D21610C8CEAA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2FA9D4F1-B702-4F26-80BA-A9E6B487E0F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2FA9D4F1-B702-4F26-80BA-A9E6B487E0F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2FA9D4F1-B702-4F26-80BA-A9E6B487E0F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2FA9D4F1-B702-4F26-80BA-A9E6B487E0F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B6378F97-140F-4119-B50E-6B829462675F} = {3F659DBD-43F4-4433-8261-DE0D9F02EC96}
