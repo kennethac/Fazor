@@ -1,12 +1,47 @@
+@using System.Runtime.CompilerServices
 @inherits Fazor.FazorComponent
 @rendermode InteractiveServer
-
-<p>This is fake.</p>
 
 @code {
 
     private RenderFragment FazorRender(string name, int age, EventCallback onClick)
     {
-        return @<p>Hello, @name! I heard you are @age years old.<button @onclick="@onClick">Click me</button></p>;
+        Console.WriteLine("Rendering!");
+        var (buttonPresses, setButtonPresses) = UseState(1);
+        var twicePressed = buttonPresses * 2;
+        var thricePressed = Derive(async x =>
+        {
+            await Task.Delay(TimeSpan.FromSeconds(3));
+            return 3 * x;
+        }, buttonPresses);
+        var value = thricePressed.AsSuccess()?.Value ?? -1;
+        Console.WriteLine($"Thrice pressed is {thricePressed.GetType()}");
+        Console.WriteLine($"Thrice pressed as success is {thricePressed.AsSuccess()?.GetType().Name ?? "not success"}");
+        Console.WriteLine($"Thrice pressed result is {thricePressed.GetHashCode()}");
+        return @<text>
+                    <p>@value</p>
+                    <p>
+                        Hello, @name! I heard you are @age years old.
+                        <button class="btn btn-success" @onclick="@onClick">Click me</button>
+                        <button class="btn btn-info" @onclick="@(() => setButtonPresses(buttonPresses + 1))">Increase @buttonPresses</button>
+                    </p>
+                    <p>2x the number you clicked is @twicePressed!</p>
+                    <p>@thricePressed.GetType().Name</p>
+                    <p>@thricePressed.GetHashCode()</p>
+                    @if (thricePressed.AsSuccess() is { Value: var ok })
+                    {
+                        <p>Thrice pressed is @ok</p>
+                    }
+                    else if (thricePressed.AsFailure() is { Value: var err })
+                    {
+                        <p>Got an error: @err.Message</p>
+                    }
+                    else
+                    {
+                        <p>Loading...</p>
+                    }
+                    <button @onclick="@TriggerRender">Rerender</button>
+                </text>;
     }
+
 }
