@@ -4,8 +4,8 @@
 
 @code {
 
-    private RenderFragment FazorRender(string name, int age)
+    private RenderFragment FazorRender(string name, int age, EventCallback onClick)
     {
-        return @<p>Hello, @name! I heard you are @age years old.</p>;
+        return @<p>Hello, @name! I heard you are @age years old.<button @onClick="@onClick">Click me</button></p>;
     }
 }

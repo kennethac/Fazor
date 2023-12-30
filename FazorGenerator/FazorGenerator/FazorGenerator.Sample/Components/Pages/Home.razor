@@ -1,16 +1,20 @@
 ﻿@page "/"
-
+@rendermode InteractiveServer
 <PageTitle>Home</PageTitle>
 
 <h1>Hello, world!</h1>
 
-<Testing Age="test" Name="Kenneth"></Testing>
-<Testing2 Age="22" Name="Kenneth"></Testing2>
+<Testing Age="99" Name="Kenneth" OnClick="@IncE"></Testing>
+<Testing2 Age="99" Name="Kenneth"></Testing2>
 
 Welcome to your new app.
 
 @code {
 
     int TestAge = 28;
-
+    private EventCallback IncE => EventCallback.Factory.Create(this, Inc);
+    public void Inc()
+    {
+        TestAge += 1;
+    }
 }
